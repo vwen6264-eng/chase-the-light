@@ -1,0 +1,21 @@
+# Impeccable runtime state and per-developer overrides
+**/.impeccable/config.local.json
+**/.impeccable/hook.cache.json
+**/.impeccable/hook.pending.json
+**/.impeccable/*.png
+**/.impeccable/review/
+**/.impeccable/questions/
+**/.impeccable/live/server.json
+**/.impeccable/live/sessions/
+**/.impeccable/live/previews/
+**/.impeccable/live/annotations/
+**/.impeccable/live/cache/
+**/.impeccable/live/*.png
+
+# Node and local logs
+node_modules/
+npm-debug.log*
+*.log
+
+# Separate desktop wallpaper distribution (large installers and binaries)
+Lively Wallpaper/

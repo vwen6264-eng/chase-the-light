@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-05T00:00:00.000Z",
+  "title": "Design System: Chase the Light",
+  "extensions": {
+    "colorMeta": {
+      "lake-slate": { "role": "primary", "displayName": "Slate Lake", "canonical": "#708f9d", "tonalRamp": ["#10292f", "#193d43", "#254f54", "#3f686d", "#708f9d", "#91abb0", "#b2c5c7", "#dce6e5"] },
+      "deep-lake": { "role": "neutral", "displayName": "Deep Lake", "canonical": "#10292f", "tonalRamp": ["#061b20", "#0b2228", "#10292f", "#193d43", "#28535a", "#477278", "#7f9da0", "#c4d4d3"] },
+      "pale-leaf": { "role": "secondary", "displayName": "Pale Leaf", "canonical": "#deebd8", "tonalRamp": ["#27342b", "#3b4b3f", "#526653", "#748a73", "#9eb79b", "#bed2b9", "#deebd8", "#f4f8ef"] },
+      "mist": { "role": "neutral", "displayName": "Mist", "canonical": "#f6f3eb", "tonalRamp": ["#20211f", "#41413d", "#686862", "#98968c", "#c5c2b8", "#dedbd2", "#f6f3eb", "#fffef9"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Waterline Display", "purpose": "Expressive portfolio statements and hero headlines." },
+      "body": { "displayName": "Clear UI Sans", "purpose": "Functional copy and player controls." }
+    },
+    "shadows": [
+      { "name": "record-ambient", "value": "0 12px 30px rgba(0,0,0,0.27)", "purpose": "Lift the grooved record from the player stage." },
+      { "name": "dialog-deep", "value": "0 30px 100px rgba(6,27,40,0.38)", "purpose": "Separate project dialogs from the water canvas." }
+    ],
+    "motion": [
+      { "name": "portfolio-hover", "value": "padding-left 0.3s ease", "purpose": "Give work links a small horizontal drift." },
+      { "name": "record-spin", "value": "12s linear infinite", "purpose": "Show active playback without distracting from controls." }
+    ],
+    "breakpoints": [
+      { "name": "phone", "value": "600px" },
+      { "name": "player-stack", "value": "760px" },
+      { "name": "short-viewport", "value": "520px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Player Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Pale leaf action used for search, play, and selected library states.",
+      "html": "<button class=\"ds-btn-primary\">搜索</button>",
+      "css": ".ds-btn-primary { background: #deebd8; color: #10292f; border: 0; border-radius: 10px; padding: 9px 13px; font: 12px Arial, sans-serif; transition: background .2s, transform .2s; } .ds-btn-primary:hover { background: #f0f5e8; transform: translateY(-2px); } .ds-btn-primary:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }"
+    },
+    {
+      "name": "Ghost Control",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Quiet transparent control for secondary actions and library tabs.",
+      "html": "<button class=\"ds-btn-ghost\">我的收藏</button>",
+      "css": ".ds-btn-ghost { background: transparent; color: #f6f3eb; border: 1px solid rgba(255,255,255,.19); border-radius: 30px; padding: 10px 14px; font: 12px Arial, sans-serif; transition: background .2s, color .2s; } .ds-btn-ghost:hover { background: rgba(255,255,255,.12); } .ds-btn-ghost:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "text-input",
+      "description": "Dark translucent field for music search and dialog entry.",
+      "html": "<input class=\"ds-input-search\" placeholder=\"搜索歌曲、歌手或专辑\" />",
+      "css": ".ds-input-search { background: rgba(8,35,42,.26); color: #f6f3eb; border: 1px solid rgba(255,255,255,.19); border-radius: 12px; padding: 12px 14px; font: 14px Arial, sans-serif; } .ds-input-search::placeholder { color: #a9c7bd; } .ds-input-search:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }"
+    },
+    {
+      "name": "Player Panel",
+      "kind": "card",
+      "refersTo": "player-panel",
+      "description": "Glassy deck or queue container above the lake canvas.",
+      "html": "<section class=\"ds-panel\"><h2>湖畔播放器</h2></section>",
+      "css": ".ds-panel { background: linear-gradient(135deg, rgba(22,56,60,.79), rgba(14,41,50,.72)); color: #f6f3eb; border: 1px solid rgba(255,255,255,.19); border-radius: 22px; padding: 28px; box-shadow: 0 24px 80px rgba(16,47,51,.19), inset 0 1px 0 rgba(255,255,255,.12); backdrop-filter: blur(22px); } .ds-panel h2 { margin: 0; font: 400 28px 'Microsoft YaHei', Arial, sans-serif; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Listening at the Waterline",
+    "overview": "The interface treats the lake as both scene and material. A slate blue-green surface, translucent panels, soft mint controls, and serif display type create a calm portfolio that lets the work and the sound arrive gradually. The background is an active canvas: the lake, ripples, fish, and changing light remain visible behind the interface.\n\nThe portfolio is sparse and atmospheric. The player keeps that same world while becoming more functional: glassy decks and queues sit above the water, compact labels support scanning, and the record, timeline, lyrics, and queue provide tactile anchors.",
+    "keyCharacteristics": ["Lake blue-green surfaces with pale plant-like highlights.", "Serif display headlines paired with restrained sans-serif UI text.", "Translucent glass layers and fine white rules instead of heavy borders.", "Motion is slow and purposeful: water, record rotation, hover drift, and day/night changes.", "Responsive layouts preserve the scene while collapsing player panels into a single column."],
+    "rules": [
+      { "name": "The Waterline Rule", "body": "Keep the lake visible through transparent or translucent layers; opaque panels are reserved for readable dialogs and reduced-transparency preferences.", "section": "colors" },
+      { "name": "The Two Voices Rule", "body": "Use Georgia for expressive statements and the sans-serif stack for controls, metadata, and functional copy.", "section": "typography" }
+    ],
+    "dos": ["Do keep important text warm off-white or pale mint against deep teal surfaces.", "Do preserve the visible water, day/night switch, ripples, and fish interaction as part of the identity.", "Do use translucency, blur, and fine rules to separate layers.", "Do keep desktop and responsive pages visually synchronized.", "Do let mobile layouts collapse gracefully and remain usable at short heights."],
+    "donts": ["Don't introduce unrelated bright brand colors or generic purple-blue gradients.", "Don't cover the lake with opaque containers when a translucent layer is readable.", "Don't replace the serif display voice with a generic system heading.", "Don't use dense nested cards for portfolio content.", "Don't remove reduced-motion handling or visible keyboard focus states."]
+  }
+}
